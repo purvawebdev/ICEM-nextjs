@@ -1,17 +1,44 @@
 @import "tailwindcss";
 
+/* Base Tailwind setup */
+@tailwind utilities;
+
+/* =======================
+   Global Variables
+======================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* 🎨 Brand Colors */
+  --color-primary: 39, 141, 164;
+  --color-primary-hex: #278da4;
+
+  --color-secondary: 0, 60, 132;
+  --color-secondary-hex: #003c84;
+
+  --color-tertiary: 255, 255, 255;
+  --color-tertiary-hex: #ffffff;
 }
 
+/* =======================
+   Tailwind Theme Inline
+======================= */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 👇 Use these so Tailwind classes work */
+  --color-primary: rgb(var(--color-primary));
+  --color-secondary: rgb(var(--color-secondary));
+  --color-tertiary: rgb(var(--color-tertiary));
 }
 
+/* =======================
+   Dark Mode (optional)
+======================= */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +46,66 @@
   }
 }
 
+/* =======================
+   Global Styles
+======================= */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =======================
+   Utility Classes
+======================= */
+
+/* Backgrounds */
+.bg-primary {
+  background-color: rgb(var(--color-primary));
+}
+
+.bg-secondary {
+  background-color: rgb(var(--color-secondary));
+}
+
+.bg-tertiary {
+  background-color: rgb(var(--color-tertiary));
+}
+
+/* Text Colors */
+.text-primary {
+  color: rgb(var(--color-primary));
+}
+
+.text-secondary {
+  color: rgb(var(--color-secondary));
+}
+
+.text-tertiary {
+  color: rgb(var(--color-tertiary));
+}
+
+/* Borders */
+.border-primary {
+  border-color: rgb(var(--color-primary));
+}
+
+.border-secondary {
+  border-color: rgb(var(--color-secondary));
+}
+
+.border-tertiary {
+  border-color: rgb(var(--color-tertiary));
+}
+
+/* Hover effects */
+.hover\:text-primary:hover {
+  color: rgb(var(--color-primary)) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Smooth transitions for hover states */
+.transition-color {
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }

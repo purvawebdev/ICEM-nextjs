@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 
 const HeroSlider = () => {
   const images = [
@@ -10,18 +10,17 @@ const HeroSlider = () => {
     "/banners/ICEMBANNERMECH.jpg",
     "/banners/ICEMBANNERCLASS.jpg",
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const sliderRef = useRef(null);
 
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
     }, 4000);
     return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [currentIndex]);
 
   const handleNext = () => {
     if (currentIndex === images.length - 1) {
@@ -44,6 +43,7 @@ const HeroSlider = () => {
 
   return (
     <div className="relative w-full overflow-hidden bg-black">
+      {/* Slider container */}
       <div
         ref={sliderRef}
         className={`flex ${
@@ -54,15 +54,18 @@ const HeroSlider = () => {
         }}
       >
         {[...images, images[0]].map((img, i) => (
-          <img
+          <Image
             key={i}
             src={img}
             alt={`Slide ${i + 1}`}
             className="w-full object-cover flex-shrink-0"
+            height={65}
+            width={1700}
           />
         ))}
       </div>
 
+      {/* Dots (bottom-left corner) */}
       <div className="absolute bottom-5 right-5 flex gap-2 items-center">
         {images.map((_, i) => (
           <button

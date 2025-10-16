@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiMenuAlt2, HiX } from "react-icons/hi";
@@ -32,45 +32,78 @@ const Navbar = () => {
     setMobileDropdown(mobileDropdown === dropdownName ? null : dropdownName);
   };
 
-  // ✅ Replace "to" with "href" everywhere
   const dropdownContent = {
     aboutUs: {
       title: "Our Navigation",
       sections: [
         {
           items: [
-            { label: "Indira College of Engineering and Management (ICEM)", link: "/about/overview" },
-            { label: "Shree Chanakya Education Society", link: "/about/chanakya-edu" },
-            { label: "Indira Group of Institute", link: "/about/IGOI" },
-            { label: "Chairpersons Profile & Chief Mentor IGL", link: "/about/cfcm" },
-            { label: "Facilities", link: "/facilities/sports" },
-            { label: "Governance", link: "/facilities/governance" },
+            {
+              label: "Indira College of Engineering and Management (ICEM)",
+              link: "/about/overview",
+            },
+            {
+              label: "Shree Chanakya Education Society",
+              link: "/about/chanakya-edu",
+            },
+            { label: "Indira Group of Institute", link: "/about/igi" },
+            {
+              label: "Chairpersons Profile & Chief Mentor IGL",
+              link: "/about/cfcm",
+            },
+            { label: "Facilities", link: "/about/facilities/sports" },
+            { label: "Governance", link: "/about/governance" },
             { label: "Campus Leadership", link: "" },
-            { label: "Examination", link: "/examination" },
-            { label: "Accreditation", link: "/accreditation" },
+            { label: "Examination", link: "about/examination" },
+            { label: "Accreditation", link: "about/accreditation" },
           ],
         },
       ],
     },
+
     campusLife: {
       title: "Campus Life",
       sections: [
         {
           title: "Student Services",
           items: [
-            { label: "Student Welfare", link: "/campus-life/student-welfare" },
+            {
+              label: "Student Welfare",
+              link: "/campus-life/student-welfare",
+            },
             { label: "IIC", link: "/campus-life/iic" },
-            { label: "Induction Programme", link: "/campus-life/induction-programme" },
-            { label: "Student Council", link: "/campus-life/student-council" },
+            {
+              label: "Induction Programme",
+              link: "/campus-life/induction-programme",
+            },
+            {
+              label: "Student Council",
+              link: "/campus-life/student-council",
+            },
             { label: "National Service Scheme", link: "/campus-life/nss" },
             { label: "ICEM Awards", link: "/campus-life/icem-awards" },
             { label: "Academics", link: "/campus-life/academics" },
             { label: "Committies", link: "/campus-life/committees" },
-            { label: "Grievance Redressals", link: "/campus-life/grievance-redressals" },
+            {
+              label: "Grievance Redressals",
+              link: "/campus-life/grievance-redressals",
+            },
+          ],
+        },
+        {
+          title: "Campus Activities",
+          items: [
+            { label: "Cultural Events", link: "/campus-life/cultural-events" },
+            { label: "Sports & Recreation", link: "/campus-life/sports" },
+            { label: "Clubs & Societies", link: "/campus-life/clubs" },
+            { label: "Technical Fest", link: "/campus-life/tech-fest" },
+            { label: "Workshops & Seminars", link: "/campus-life/workshops" },
+            { label: "Annual Fest", link: "/campus-life/annual-fest" },
           ],
         },
       ],
     },
+
     programs: {
       title: "Programs & Admission",
       sections: [
@@ -78,10 +111,22 @@ const Navbar = () => {
           title: "Undergraduate Programs",
           items: [
             { label: "Civil Engineering", link: "/programs/civil-engineering" },
-            { label: "Computer Engineering", link: "/programs/computer-engineering" },
-            { label: "Mechanical Engineering", link: "/programs/mechanical-engineering" },
-            { label: "Artificial Intelligence and Data Science", link: "/programs/ai-ds" },
-            { label: "Electronics and Telecommunication", link: "/programs/entc" },
+            {
+              label: "Computer Engineering",
+              link: "/programs/computer-engineering",
+            },
+            {
+              label: "Mechanical Engineering",
+              link: "/programs/mechanical-engineering",
+            },
+            {
+              label: "Artificial Intelligence and Data Science",
+              link: "/programs/ai-ds",
+            },
+            {
+              label: "Electronics and Telecommunication",
+              link: "/programs/entc",
+            },
             { label: "First Year Engineering", link: "/programs/fye" },
             { label: "Information Technology", link: "/programs/it" },
             { label: "Integrated MBA (BBA + MBA)", link: "/programs/imba" },
@@ -93,8 +138,65 @@ const Navbar = () => {
           items: [
             { label: "MBA", link: "/programs/mba" },
             { label: "MCA", link: "/programs/mca" },
-            { label: "M-Tech in Mechanical Engineering", link: "/programs/mtech-mech" },
-            { label: "M-Tech in Computer Science", link: "/programs/mtech-comp" },
+            {
+              label: "M-Tech in Mechanical Engineering",
+              link: "/programs/mtech-mech",
+            },
+            {
+              label: "M-Tech in Computer Science",
+              link: "/programs/mtech-comp",
+            },
+          ],
+        },
+      ],
+    },
+
+    placement: {
+      title: "Placement",
+      sections: [
+        {
+          items: [
+            "Placement Team",
+            "Our Recruiters",
+            "Placed Students",
+            "Placement Policy",
+          ],
+        },
+      ],
+    },
+
+    accreditation: {
+      title: "Accreditation",
+      sections: [
+        {
+          title: "NAAC",
+          items: [
+            "SSR reports year wise",
+            "Criteria wise Details",
+            "AQAR reports",
+            "NAAC Certificate",
+          ],
+        },
+        {
+          title: "IQAC",
+          items: [
+            "IQAC Committee",
+            "IQAC Notices",
+            "MOMS & Actions",
+            "IQAC Formats",
+            "Best Practices",
+            "Distinctive Practice",
+          ],
+        },
+        {
+          title: "Reports & Others",
+          items: [
+            "SPPU Annual Report",
+            "Code of Conduct",
+            "NIRF",
+            "Financial Statements",
+            "Soft Skills & Aptitude",
+            "Reports",
           ],
         },
       ],
@@ -137,69 +239,170 @@ const Navbar = () => {
     </div>
   );
 
+  const renderMobileDropdown = (content, dropdownName) => (
+    <div className="bg-gray-50 rounded-lg mt-2 overflow-hidden">
+      {content.sections.map((section, index) => (
+        <div key={index} className="border-t border-gray-200 first:border-t-0">
+          {section.title && (
+            <h4 className="font-semibold text-secondary px-4 py-2 bg-gray-100">
+              {section.title}
+            </h4>
+          )}
+          <ul className="space-y-1">
+            {section.items.map((item, itemIndex) => (
+              <li key={itemIndex}>
+                {item.link ? (
+                  <Link
+                    href={item.link}
+                    className="flex items-center justify-between px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span>{item.label || item}</span>
+                    <TbExternalLink className="text-gray-500 text-xs" />
+                  </Link>
+                ) : (
+                  <div className="flex items-center justify-between px-4 py-2 text-sm text-gray-500">
+                    <span>{item.label || item}</span>
+                    <TbExternalLink className="text-gray-400 text-xs" />
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <>
       {/* ===== NAVBAR ===== */}
-      <nav className="w-full h-[12vh] flex bg-white shadow-sm font-sans relative z-50">
-        {/* Left: Logo */}
+      <nav className="w-full h-[12vh] flex bg-white shadow-sm font-sans relative">
+        {/* Left: Logo - 80% width on mobile */}
         <div className="w-[80%] md:w-[30%] h-full flex items-center justify-start pl-4 md:pl-0 md:justify-center">
           <Link href="/">
             <Image
               src="/Logo.png"
-              alt="ICEM Logo"
+              alt="Logo"
+              height={200}
+              width={200}
               className="h-16 md:h-20 w-auto cursor-pointer"
-              priority
-                width={200}
-  height={200}
             />
           </Link>
         </div>
 
-        {/* Right: Desktop Links */}
+        {/* Right Section - Desktop (unchanged) */}
         <div className="hidden md:flex w-[70%] h-full flex-col">
           {/* Top Bar */}
           <div className="flex justify-end w-full h-[45%] text-xs text-gray-700 bg-white">
-            <div className="flex gap-8 items-center font-bold">
-              <a href="https://rapid.grayquest.com/iudp-master" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Pay Fee</a>
-              <span className="text-gray-400">|</span>
-              <a href="https://indira.edupluscampus.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">ERP Login Staff</a>
-              <span className="text-gray-400">|</span>
-              <a href="https://myindira.edupluscampus.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">ERP Login Student</a>
-              <span className="text-gray-400">|</span>
-              <a href="https://indiraicem.ac.in/ICEM-360-degree-virtual-tour/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">360<sup>°</sup> Tour</a>
-              <span className="text-gray-400">|</span>
-              <a href="https://lc-icem-sumedh.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Leaving Certificate</a>
-              <span className="text-gray-400">|</span>
-              <Link href="/contact" className="hover:text-primary">Contact Us</Link>
-              <button
-                onClick={toggleModal}
-                className="ml-4 bg-gradient-to-r from-primary to-[#003c84] text-white px-6 py-1 rounded font-bold hover:opacity-90 transition-all"
-              >
-                Apply Now
-              </button>
+            <div className="flex gap-8">
+              <div className="flex items-center gap-2 font-bold">
+                <a
+                  href="https://rapid.grayquest.com/iudp-master"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  Pay Fee
+                </a>
+                <span className="text-gray-400">|</span>
+                <a
+                  href="https://indira.edupluscampus.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  ERP Login Staff
+                </a>
+                <span className="text-gray-400">|</span>
+                <a
+                  href="https://myindira.edupluscampus.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  ERP Login Student
+                </a>
+                <span className="text-gray-400">|</span>
+                <a
+                  href="https://indiraicem.ac.in/ICEM-360-degree-virtual-tour/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  360<sup>0</sup> Tour
+                </a>
+                <span className="text-gray-400">|</span>
+                <a
+                  href="https://lc-icem-sumedh.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  Leaving Certificate
+                </a>
+                <span className="text-gray-400">|</span>
+                <Link href="/contact" className="hover:text-primary">
+                  Contact Us
+                </Link>
+              </div>
+
+              {/* Buttons */}
+              <div className="flex">
+                <button
+                  onClick={toggleModal}
+                  className="bg-gradient-to-r from-[#278da4] to-[#003c84] text-white px-8 py-1 text-xs hover:from-[#278da4]/90 hover:to-[#003c84]/90 font-bold border-r border-white transition-all duration-300"
+                >
+                  Apply Now
+                </button>
+              </div>
             </div>
           </div>
 
           {/* Bottom Nav Links */}
-          <div className="flex justify-end items-center h-[55%] text-black px-6 text-sm font-medium whitespace-nowrap gap-10">
-            <div onMouseEnter={() => handleMouseEnter("aboutUs")} onMouseLeave={handleMouseLeave} className="hover:text-primary cursor-pointer">
-              About Us
+          <div className="flex justify-end items-center h-[55%] text-black px-6 text-sm font-bold whitespace-nowrap gap-10">
+            <div
+              className="flex items-center gap-1 font-bold cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("aboutUs")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>About Us</span>
             </div>
-            <div onMouseEnter={() => handleMouseEnter("campusLife")} onMouseLeave={handleMouseLeave} className="hover:text-primary cursor-pointer">
-              Campus Life
+            <div
+              className="flex items-center gap-1 font-bold cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("campusLife")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Campus Life</span>
             </div>
-            <div onMouseEnter={() => handleMouseEnter("programs")} onMouseLeave={handleMouseLeave} className="hover:text-primary cursor-pointer">
-              Programs & Admission
+            <div
+              className="flex items-center gap-1 font-bold cursor-pointer hover:text-primary"
+              onMouseEnter={() => handleMouseEnter("programs")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <span>Programs & Admission</span>
             </div>
-            <Link href="/placement" className="hover:text-primary">Placement</Link>
-            <Link href="/research" className="hover:text-primary">Research</Link>
-            <Link href="/alumni" className="hover:text-primary">Alumni</Link>
+            <Link href="/placement" className="hover:text-primary">
+              Placement
+            </Link>
+            <div className="hover:text-primary cursor-pointer">
+              Career Development
+            </div>
+            <Link href="/alumni" className="hover:text-primary">
+              Alumni
+            </Link>
+            <Link href="/research" className="hover:text-primary">
+              Research
+            </Link>
           </div>
         </div>
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu Button - 20% width on mobile */}
         <div className="md:hidden w-[20%] flex items-center justify-center pr-4">
-          <button onClick={toggleMobileMenu} className="text-gray-700 hover:text-primary">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-gray-700 hover:text-primary transition-colors"
+          >
             <HiMenuAlt2 size={28} />
           </button>
         </div>
@@ -215,6 +418,323 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+
+      {/* Mobile Menu - Slides from bottom to top */}
+      {isMobileMenuOpen && (
+        <>
+          {/* Overlay */}
+          <div
+            className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+            onClick={toggleMobileMenu}
+          />
+
+          {/* Mobile Menu Panel */}
+          <div
+            className={`md:hidden fixed bottom-0 left-0 right-0 bg-white rounded-t-2xl shadow-2xl z-50 transform transition-transform duration-300 ease-out ${
+              isMobileMenuOpen ? "translate-y-0" : "translate-y-full"
+            }`}
+            style={{ maxHeight: "85vh" }}
+          >
+            {/* Header with Close Button */}
+            <div className="flex justify-between items-center p-4 border-b border-gray-200">
+              <h2 className="text-lg font-semibold text-gray-900">Menu</h2>
+              <button
+                onClick={toggleMobileMenu}
+                className="text-gray-500 hover:text-gray-700 transition-colors"
+              >
+                <HiX size={24} />
+              </button>
+            </div>
+
+            {/* Scrollable Content */}
+            <div
+              className="overflow-y-auto"
+              style={{ maxHeight: "calc(85vh - 60px)" }}
+            >
+              {/* Quick Links Grid */}
+              <div className="p-4 border-b border-gray-200">
+                <div className="grid grid-cols-3 gap-2 text-xs">
+                  <a
+                    href="https://rapid.grayquest.com/iudp-master"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    Pay Fee
+                  </a>
+                  <a
+                    href="https://indira.edupluscampus.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    ERP Staff
+                  </a>
+                  <a
+                    href="https://myindira.edupluscampus.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    ERP Student
+                  </a>
+                  <a
+                    href="https://indiraicem.ac.in/ICEM-360-degree-virtual-tour/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    360° Tour
+                  </a>
+                  <a
+                    href="https://lc-icem-sumedh.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                  >
+                    Leaving Cert
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="text-center py-2 bg-gray-50 rounded hover:bg-gray-100 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="p-4 space-y-0">
+                {/* About Us */}
+                <div className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleMobileDropdown("aboutUs")}
+                    className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-primary transition-colors"
+                  >
+                    <span>About Us</span>
+                    <span className="text-lg">
+                      {mobileDropdown === "aboutUs" ? "−" : "+"}
+                    </span>
+                  </button>
+                  {mobileDropdown === "aboutUs" &&
+                    renderMobileDropdown(dropdownContent.aboutUs, "aboutUs")}
+                </div>
+
+                {/* Campus Life */}
+                <div className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleMobileDropdown("campusLife")}
+                    className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-primary transition-colors"
+                  >
+                    <span>Campus Life</span>
+                    <span className="text-lg">
+                      {mobileDropdown === "campusLife" ? "−" : "+"}
+                    </span>
+                  </button>
+                  {mobileDropdown === "campusLife" &&
+                    renderMobileDropdown(
+                      dropdownContent.campusLife,
+                      "campusLife"
+                    )}
+                </div>
+
+                {/* Programs & Admission */}
+                <div className="border-b border-gray-200">
+                  <button
+                    onClick={() => toggleMobileDropdown("programs")}
+                    className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-primary transition-colors"
+                  >
+                    <span>Programs & Admission</span>
+                    <span className="text-lg">
+                      {mobileDropdown === "programs" ? "−" : "+"}
+                    </span>
+                  </button>
+                  {mobileDropdown === "programs" &&
+                    renderMobileDropdown(dropdownContent.programs, "programs")}
+                </div>
+
+                {/* Single Links */}
+                <div className="border-b border-gray-200">
+                  <Link
+                    href="/placement"
+                    className="block py-4 font-medium text-gray-900 hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Placement
+                  </Link>
+                </div>
+                <div className="border-b border-gray-200">
+                  <div className="block py-4 font-medium text-gray-900">
+                    Career Development
+                  </div>
+                </div>
+                <div className="border-b border-gray-200">
+                  <Link
+                    href="/alumni"
+                    className="block py-4 font-medium text-gray-900 hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Alumni
+                  </Link>
+                </div>
+                <div className="border-b border-gray-200">
+                  <Link
+                    href="/research"
+                    className="block py-4 font-medium text-gray-900 hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Research
+                  </Link>
+                </div>
+              </div>
+
+              {/* Apply Now Button */}
+              <div className="p-4 border-t border-gray-200 bg-gray-50">
+                <button
+                  onClick={() => {
+                    toggleModal();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full bg-primary text-white py-3 font-bold rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Apply Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* ===== Helpline Drawer ===== */}
+      <div
+        className={`fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${
+          isHelplineOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="bg-primary text-white p-4 flex justify-between items-center">
+          <h3 className="text-lg font-bold">Admissions Helpline</h3>
+          <button onClick={toggleHelpline}>
+            <HiX size={24} />
+          </button>
+        </div>
+
+        <div className="p-6 text-gray-800 space-y-6 overflow-y-auto h-full">
+          <div>
+            <p className="text-sm text-gray-600">
+              For more information give a miss call on
+            </p>
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <p className="text-2xl font-bold text-primary text-center">
+                1800 267 1999
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {isHelplineOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={toggleHelpline}
+        />
+      )}
+
+      {/* ===== APPLY NOW MODAL ===== */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[60]">
+          <div className="bg-white w-[90%] md:w-[680px] p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={toggleModal}
+              aria-label="Close"
+              className="absolute top-3 right-3 text-gray-600 hover:text-red-600 text-2xl"
+            >
+              ×
+            </button>
+            <h2 className="text-2xl font-bold text-center mb-6 text-blue-900">
+              Apply Now
+            </h2>
+
+            <form className="space-y-4">
+              <input
+                type="text"
+                placeholder="Enter Name *"
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
+              <input
+                type="email"
+                placeholder="Enter Email Address *"
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
+              <div className="flex gap-2">
+                <select className="w-24 border border-gray-300 rounded px-2 py-2">
+                  <option>+91</option>
+                </select>
+                <input
+                  type="tel"
+                  placeholder="Enter Mobile Number *"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div className="flex gap-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                  <option>Select State *</option>
+                </select>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                  <option>Select City *</option>
+                </select>
+              </div>
+
+              <div className="flex gap-2">
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                  <option>Select Discipline Applying For *</option>
+                </select>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
+                  <option>Select Course *</option>
+                </select>
+              </div>
+
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2">
+                <option>Select Program *</option>
+              </select>
+
+              <input
+                type="text"
+                placeholder="Enter CET Score"
+                className="w-full border border-gray-300 rounded-md px-3 py-2"
+              />
+
+              <div className="flex gap-3 items-center">
+                <div className="bg-gray-100 border border-gray-300 rounded-md w-1/2 flex items-center justify-center py-2">
+                  <span className="text-lg font-bold text-gray-700 select-none">
+                    8fcb09
+                  </span>
+                </div>
+                <input
+                  type="text"
+                  placeholder="Enter Captcha"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2"
+                />
+              </div>
+
+              <div className="flex items-center gap-2 mt-2">
+                <input type="checkbox" id="agreeModal" />
+                <label htmlFor="agreeModal" className="text-sm text-gray-700">
+                  I agree to receive information regarding my submitted enquiry*
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-[#E85C0D] hover:bg-[#d14f08] text-white font-semibold py-2 rounded-md"
+              >
+                SUBMIT
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 };
