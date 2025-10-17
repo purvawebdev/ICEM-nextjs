@@ -51,10 +51,10 @@ const Navbar = () => {
               label: "Chairpersons Profile & Chief Mentor IGL",
               link: "/about/cfcm",
             },
-            { label: "Facilities", link: "/about/facilities/sports" },
+            { label: "Facilities", link: "/about/facilities" },
             { label: "Governance", link: "/about/governance" },
             { label: "Campus Leadership", link: "" },
-            { label: "Examination", link: "about/examination" },
+            { label: "Examination", link: "examination" },
             { label: "Accreditation", link: "about/accreditation" },
           ],
         },
@@ -110,7 +110,6 @@ const Navbar = () => {
         {
           title: "Undergraduate Programs",
           items: [
-            { label: "Civil Engineering", link: "/programs/civil-engineering" },
             {
               label: "Computer Engineering",
               link: "/programs/computer-engineering",
@@ -353,30 +352,30 @@ const Navbar = () => {
                   onClick={toggleModal}
                   className="bg-gradient-to-r from-[#278da4] to-[#003c84] text-white px-8 py-1 text-xs hover:from-[#278da4]/90 hover:to-[#003c84]/90 font-bold border-r border-white transition-all duration-300"
                 >
-                  Apply Now
+                  Enquire Now
                 </button>
               </div>
             </div>
           </div>
 
           {/* Bottom Nav Links */}
-          <div className="flex justify-end items-center h-[55%] text-black px-6 text-sm font-bold whitespace-nowrap gap-10">
+          <div className="flex justify-end items-center h-[55%] text-black px-6 text-sm font-semibold whitespace-nowrap gap-10">
             <div
-              className="flex items-center gap-1 font-bold cursor-pointer hover:text-primary"
+              className="flex items-center gap-1  cursor-pointer hover:text-primary"
               onMouseEnter={() => handleMouseEnter("aboutUs")}
               onMouseLeave={handleMouseLeave}
             >
               <span>About Us</span>
             </div>
             <div
-              className="flex items-center gap-1 font-bold cursor-pointer hover:text-primary"
+              className="flex items-center gap-1  cursor-pointer hover:text-primary"
               onMouseEnter={() => handleMouseEnter("campusLife")}
               onMouseLeave={handleMouseLeave}
             >
               <span>Campus Life</span>
             </div>
             <div
-              className="flex items-center gap-1 font-bold cursor-pointer hover:text-primary"
+              className="flex items-center gap-1 cursor-pointer hover:text-primary"
               onMouseEnter={() => handleMouseEnter("programs")}
               onMouseLeave={handleMouseLeave}
             >
@@ -598,7 +597,7 @@ const Navbar = () => {
                   }}
                   className="w-full bg-primary text-white py-3 font-bold rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  Apply Now
+                  Enquire Now
                 </button>
               </div>
             </div>
@@ -642,8 +641,9 @@ const Navbar = () => {
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[60]">
+        <div className="fixed inset-0 bg-white/30 backdrop-blur-2xl flex justify-center items-center z-[60]">
           <div className="bg-white w-[90%] md:w-[680px] p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto">
+            {/* Close Button */}
             <button
               onClick={toggleModal}
               aria-label="Close"
@@ -651,73 +651,129 @@ const Navbar = () => {
             >
               ×
             </button>
+
             <h2 className="text-2xl font-bold text-center mb-6 text-blue-900">
               Apply Now
             </h2>
 
             <form className="space-y-4">
+              {/* Name & Email */}
               <input
                 type="text"
                 placeholder="Enter Name *"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]"
               />
               <input
                 type="email"
                 placeholder="Enter Email Address *"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]"
               />
+
+              {/* Mobile */}
               <div className="flex gap-2">
-                <select className="w-24 border border-gray-300 rounded px-2 py-2">
-                  <option>+91</option>
+                <select className="w-24 border border-gray-300 rounded-md px-2 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
+                  <option value="" disabled selected className="text-gray-400">
+                    +91
+                  </option>
                 </select>
                 <input
                   type="tel"
                   placeholder="Enter Mobile Number *"
-                  className="flex-1 border border-gray-300 rounded-md px-3 py-2"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]"
                 />
               </div>
 
+              {/* State & City */}
               <div className="flex gap-2">
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
-                  <option>Select State *</option>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
+                  <option value="" disabled selected className="text-gray-400">
+                    Select State *
+                  </option>
+                  <option value="Maharashtra" className="text-gray-900">
+                    Maharashtra
+                  </option>
+                  <option value="Karnataka" className="text-gray-900">
+                    Karnataka
+                  </option>
                 </select>
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
-                  <option>Select City *</option>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
+                  <option value="" disabled selected className="text-gray-400">
+                    Select City *
+                  </option>
+                  <option value="Pune" className="text-gray-900">
+                    Pune
+                  </option>
+                  <option value="Mumbai" className="text-gray-900">
+                    Mumbai
+                  </option>
                 </select>
               </div>
 
+              {/* Discipline & Course */}
               <div className="flex gap-2">
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
-                  <option>Select Discipline Applying For *</option>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
+                  <option value="" disabled selected className="text-gray-400">
+                    Select Discipline Applying For *
+                  </option>
+                  <option value="Engineering" className="text-gray-900">
+                    Engineering
+                  </option>
+                  <option value="Management" className="text-gray-900">
+                    Management
+                  </option>
                 </select>
-                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2">
-                  <option>Select Course *</option>
+                <select className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
+                  <option value="" disabled selected className="text-gray-400">
+                    Select Course *
+                  </option>
+                  <option
+                    value="Computer Engineering"
+                    className="text-gray-900"
+                  >
+                    Computer Engineering
+                  </option>
+                  <option
+                    value="Mechanical Engineering"
+                    className="text-gray-900"
+                  >
+                    Mechanical Engineering
+                  </option>
                 </select>
               </div>
 
-              <select className="w-full border border-gray-300 rounded-md px-3 py-2">
-                <option>Select Program *</option>
+              {/* Program */}
+              <select className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
+                <option value="" disabled selected className="text-gray-400">
+                  Select Program *
+                </option>
+                <option value="B.Tech" className="text-gray-900">
+                  B.Tech
+                </option>
+                <option value="M.Tech" className="text-gray-900">
+                  M.Tech
+                </option>
               </select>
 
+              {/* CET Score */}
               <input
                 type="text"
                 placeholder="Enter CET Score"
-                className="w-full border border-gray-300 rounded-md px-3 py-2"
+                className="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]"
               />
 
+              {/* Captcha */}
               <div className="flex gap-3 items-center">
-                <div className="bg-gray-100 border border-gray-300 rounded-md w-1/2 flex items-center justify-center py-2">
-                  <span className="text-lg font-bold text-gray-700 select-none">
-                    8fcb09
-                  </span>
+                <div className="bg-gray-100 border border-gray-300 rounded-md w-1/2 flex items-center justify-center py-2 text-gray-700 font-bold select-none">
+                  8fcb09
                 </div>
                 <input
                   type="text"
                   placeholder="Enter Captcha"
-                  className="flex-1 border border-gray-300 rounded-md px-3 py-2"
+                  className="flex-1 border border-gray-300 rounded-md px-3 py-2 text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]"
                 />
               </div>
 
+              {/* Checkbox */}
               <div className="flex items-center gap-2 mt-2">
                 <input type="checkbox" id="agreeModal" />
                 <label htmlFor="agreeModal" className="text-sm text-gray-700">
@@ -725,9 +781,10 @@ const Navbar = () => {
                 </label>
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#E85C0D] hover:bg-[#d14f08] text-white font-semibold py-2 rounded-md"
+                className="w-full bg-[#E85C0D] hover:bg-[#d14f08] text-white font-semibold py-2 rounded-md transition"
               >
                 SUBMIT
               </button>

@@ -8,7 +8,7 @@ const FixedActionBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-1/2 -translate-y-1/2 z-[99999] flex items-center">
+    <div className="fixed bottom-6 z-[99999] flex items-center">
       {/* 👇 Single hover zone (Hamburger + Icons) */}
       <div
         className="relative flex items-center group"

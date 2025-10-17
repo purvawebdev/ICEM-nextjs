@@ -1,20 +1,31 @@
-// import DiscoverPaths from "@/components/home/DiscoverPaths";
-// import NewsSection from "@/components/home/NewsSection";
-// import ProgramList from "@/components/home/ProgramList";
-// import RecruiterSection from "@/components/home/RecruiterSection";
-// import InstagramFeed from "@/components/home/InstagramFeed";
 
+import AcademicYearSection from "@/components/home/AcademicYearSection";
+import CampusBeat from "@/components/home/CampusBeat";
+import CollegeUnplugged from "@/components/home/CollegeUnplugged";
+import DiscoverPaths from "@/components/home/DiscoverPaths";
+import EnergyInnovation from "@/components/home/EnergyInnovation";
+import EventsSection from "@/components/home/EventSection";
+import ExploreSection from "@/components/home/ExploreSection";
+import FacultySection from "@/components/home/FacultySection";
 import HeroSlider from "@/components/home/HeroSlider";
+import NewsSection from "@/components/home/NewsSection";
+import RecruitersSection from "@/components/home/RecruiterSection";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="bg-white text-gray-900">
       <HeroSlider />
-      {/* <DiscoverPaths />
+      <ExploreSection />
+      <DiscoverPaths />
+      <AcademicYearSection />
+      <RecruitersSection />
+      <EnergyInnovation />
+      <CampusBeat />
+      <CollegeUnplugged />
+      <FacultySection />
       <NewsSection />
-      <ProgramList />
-      <RecruiterSection />
-      <InstagramFeed /> */}
+      <EventsSection />
+      {/* <InstagramFeed /> */}
     </div>
   );
 }
