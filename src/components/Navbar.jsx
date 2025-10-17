@@ -54,7 +54,7 @@ const Navbar = () => {
             { label: "Facilities", link: "/about/facilities" },
             { label: "Governance", link: "/about/governance" },
             { label: "Campus Leadership", link: "" },
-            { label: "Examination", link: "examination" },
+            { label: "Examination", link: "/about/examination" },
             { label: "Accreditation", link: "about/accreditation" },
           ],
         },
