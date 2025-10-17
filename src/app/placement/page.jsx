@@ -14,13 +14,13 @@ function Placement() {
   return (
     <div className="w-full bg-white">
       {/* Hero Banner Section */}
-      <section className="w-full relative h-[500px] md:h-[700px]">
+      <section className="relative w-full h-[60vh]">
         <Image
-          src="/Banner.jpg" // place Banner.jpg in public folder
+          src="/Banner.jpg" // make sure this is in /public
           alt="Indira College Banner"
           fill
-          className="object-cover w-full h-full"
-          priority // preloads the image for faster LCP
+          className="object-cover object-center"
+          priority
         />
       </section>
       <Typingsection />

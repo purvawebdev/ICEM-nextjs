@@ -58,7 +58,7 @@ export default function Testimonials() {
             {testimonials.map((item, i) => (
               <div
                 key={i}
-                className="flex flex-col md:flex-row items-center text-left bg-primary/90 text-secondary shadow-md hover:shadow-lg transition-all duration-300 p-6 md:p-8 gap-6"
+                className="flex flex-col md:flex-row items-center text-left bg-white/90 text-secondary shadow-md hover:shadow-lg transition-all duration-300 p-6 md:p-8 gap-6"
               >
                 {/* Logo Circle */}
                 <div className="flex-shrink-0 w-24 h-24 bg-gray-400 rounded-full flex items-center justify-center text-sm font-medium text-gray-50">
