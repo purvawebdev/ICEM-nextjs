@@ -641,7 +641,7 @@ const Navbar = () => {
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-white/30 backdrop-blur-2xl flex justify-center items-center z-[60]">
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm flex justify-center items-center z-[60]">
           <div className="bg-white w-[90%] md:w-[680px] p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto">
             {/* Close Button */}
             <button
@@ -672,8 +672,11 @@ const Navbar = () => {
               {/* Mobile */}
               <div className="flex gap-2">
                 <select className="w-24 border border-gray-300 rounded-md px-2 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#E85C0D]">
-                  <option value="" disabled selected className="text-gray-400">
+                  <option value="" selected className="text-gray-400">
                     +91
+                  </option>
+                  <option value="" className="text-gray-400">
+                    +92
                   </option>
                 </select>
                 <input

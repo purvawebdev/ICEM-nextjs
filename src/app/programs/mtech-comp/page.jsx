@@ -176,8 +176,8 @@ export default function Computer() {
                   onClick={scrollToFAQ}
                   className="text-gray-700 cursor-pointer hover:text-blue-600 hover:underline transition-colors"
                 >
-                  Click here to read more about eligibility for our M. Tech Program
-                  with Specialisation in AI & Future Tech.
+                  Click here to read more about eligibility for our M. Tech
+                  Program with Specialisation in AI & Future Tech.
                 </p>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function Computer() {
 
               {/* RIGHT FORM SECTION */}
               <div className="flex-1 bg-gray-50 p-4 sm:p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto w-full">
-                <form className="space-y-4">
+                <form className="space-y-4 modal-form">
                   {/* Name */}
                   <input
                     type="text"
@@ -552,7 +552,7 @@ export default function Computer() {
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white w-[90%] md:w-[680px] p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto">
             <button
               onClick={toggleModal}
@@ -566,7 +566,7 @@ export default function Computer() {
             </h2>
 
             {/* Modal form - matches the long form */}
-            <form className="space-y-4">
+            <form className="space-y-4 modal-form">
               <input
                 type="text"
                 placeholder="Enter Name *"

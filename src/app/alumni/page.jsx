@@ -285,7 +285,7 @@ export default function Alumni() {
                   Register to stay connected and receive updates
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 modal-form">
                   <div>
                     <label
                       htmlFor="fullName"

@@ -52,7 +52,6 @@ export default function Computer() {
             <h2 className="text-3xl md:text-4xl font-bold leading-snug">
               2-Year B.E. Integrated MBA Program <br />
               with specialisation in <br />
-              
             </h2>
 
             <p className="mt-4 text-white/80 leading-relaxed">
@@ -174,8 +173,8 @@ export default function Computer() {
                   onClick={scrollToFAQ}
                   className="text-gray-700 cursor-pointer hover:text-blue-600 hover:underline transition-colors"
                 >
-                  Click here to read more about eligibility for our Integrated MBA Program
-                  with Specialisation in AI & Future Tech.
+                  Click here to read more about eligibility for our Integrated
+                  MBA Program with Specialisation in AI & Future Tech.
                 </p>
               </div>
             </div>
@@ -187,8 +186,8 @@ export default function Computer() {
               {/* LEFT TEXT SECTION */}
               <div className="flex-1 bg-white p-4 sm:p-6 rounded-lg shadow-sm">
                 <h2 className="text-2xl sm:text-3xl font-bold text-secondary mb-4 leading-snug">
-                  B.E. Integrated MBA with Artificial Intelligence <br /> & Future
-                  Technologies
+                  B.E. Integrated MBA with Artificial Intelligence <br /> &
+                  Future Technologies
                 </h2>
 
                 <p className="text-gray-700 mb-6 leading-relaxed text-sm sm:text-base">
@@ -214,7 +213,7 @@ export default function Computer() {
 
               {/* RIGHT FORM SECTION */}
               <div className="flex-1 bg-gray-50 p-4 sm:p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto w-full">
-                <form className="space-y-4">
+                <form className="space-y-4 modal-form">
                   {/* Name */}
                   <input
                     type="text"
@@ -550,7 +549,7 @@ export default function Computer() {
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white w-[90%] md:w-[680px] p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto">
             <button
               onClick={toggleModal}
@@ -564,7 +563,7 @@ export default function Computer() {
             </h2>
 
             {/* Modal form - matches the long form */}
-            <form className="space-y-4">
+            <form className="space-y-4 modal-form">
               <input
                 type="text"
                 placeholder="Enter Name *"

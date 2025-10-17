@@ -134,3 +134,24 @@ body {
 .animate-bounce-slow {
   animation: bounce-slow 2s ease-in-out infinite;
 }
+
+/* Add to globals.css */
+.modal-form input::placeholder {
+  color: #6b7280 !important; /* text-gray-500 */
+}
+
+.modal-form input {
+  color: #111827 !important; /* text-gray-900 */
+}
+
+.modal-form select {
+  color: #111827 !important; /* text-gray-900 */
+}
+
+.modal-form option[value=""] {
+  color: #6b7280 !important; /* text-gray-500 */
+}
+
+.modal-form option:not([value=""]) {
+  color: #111827 !important; /* text-gray-900 */
+}

@@ -171,7 +171,7 @@ function ContactUs() {
           </div>
 
           {/* Form */}
-          <form className="bg-cyan-600 p-6 rounded-lg space-y-4">
+          <form className="bg-cyan-600 p-6 rounded-lg space-y-4 modal-form">
             <input
               type="text"
               placeholder="Name*"

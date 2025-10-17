@@ -211,7 +211,7 @@ export default function ENTC() {
 
               {/* RIGHT FORM SECTION */}
               <div className="flex-1 bg-gray-50 p-4 sm:p-8 rounded-lg shadow-md max-h-[750px] overflow-y-auto w-full">
-                <form className="space-y-4">
+                <form className="space-y-4 modal-form">
                   {/* Name */}
                   <input
                     type="text"
@@ -547,7 +547,7 @@ export default function ENTC() {
 
       {/* ===== APPLY NOW MODAL ===== */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white w-[90%] md:w-[680px] p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto">
             <button
               onClick={toggleModal}
@@ -561,7 +561,7 @@ export default function ENTC() {
             </h2>
 
             {/* Modal form - matches the long form */}
-            <form className="space-y-4">
+            <form className="space-y-4 modal-form">
               <input
                 type="text"
                 placeholder="Enter Name *"

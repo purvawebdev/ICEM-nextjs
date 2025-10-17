@@ -585,7 +585,7 @@ const Statutory = () => {
             <h3 className="text-center text-lg font-bold mb-4 text-secondary">
               GET IN TOUCH WITH US
             </h3>
-            <form className="space-y-3">
+            <form className="space-y-3 modal-form">
               <input
                 type="text"
                 placeholder="YOUR NAME*"
