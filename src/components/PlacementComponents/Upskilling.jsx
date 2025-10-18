@@ -1,4 +1,76 @@
+"use client";
+import Image from "next/image";
+
 export default function Upskilling() {
+  const sections = [
+    {
+      title: "Mechanical",
+      items: [
+        { image: "/autocad.png", name: "AUTODESK AutoCAD" },
+        { image: "/ptc-creo.png", name: "Creo" },
+        { image: "/catia.png", name: "CATIA" },
+        { image: "/solidworks.png", name: "SolidWorks" },
+        { image: "/autocad.png", name: "CAD & CAM" },
+        { image: "/assembly.png", name: "Assembly" },
+      ],
+    },
+    {
+      title: "Civil",
+      items: [
+        { image: "/revit.png", name: "Revit" },
+        { image: "/etabs.png", name: "ETABS" },
+        { image: "/bim360.png", name: "Autodesk BIM 360" },
+        { image: "/staad.png", name: "STAAD.Pro" },
+        { image: "/3max.png", name: "3DS Max" },
+        { image: "/autocad.png", name: "AutoCAD" },
+      ],
+    },
+    {
+      title: "Electrical / ENTC",
+      items: [
+        { image: "/scada.png", name: "PLC SCADA" },
+        { image: "/vehicle.png", name: "Electric Vehicle" },
+        { image: "/trans.png", name: "Transformers & Circuits" },
+        { image: "/battery.png", name: "Battery Management System" },
+        { image: "/moble.png", name: "App/Web Development" },
+        { image: "/iot.png", name: "Internet of Things (IoT)" },
+      ],
+    },
+    {
+      title: "AI - DS - ML",
+      items: [
+        { image: "/comp/ml.png", name: "Machine Learning" },
+        { image: "/comp/python.png", name: "Python" },
+        { image: "/comp/data-science.png", name: "Data Science" },
+        { image: "/comp/tablo.png", name: "Tableau" },
+        { image: "/comp/ai.png", name: "Artificial Intelligence" },
+        { image: "/comp/deep.png", name: "Deep Learning" },
+      ],
+    },
+    {
+      title: "Computer",
+      items: [
+        { image: "/comp/full-stack.png", name: "Full Stack Development" },
+        { image: "/comp/react.png", name: "React" },
+        { image: "/comp/css.png", name: "HTML / CSS" },
+        { image: "/comp/python.png", name: "Python" },
+        { image: "/comp/mongodb.png", name: "MongoDB" },
+        { image: "/comp/dsa.png", name: "DSA" },
+      ],
+    },
+    {
+      title: "IT",
+      items: [
+        { image: "/comp/nodejs.png", name: "Node.js" },
+        { image: "/comp/django.png", name: "Django" },
+        { image: "/comp/webdev.png", name: "App/Web Development" },
+        { image: "/comp/linux.png", name: "Linux" },
+        { image: "/comp/js.png", name: "JavaScript" },
+        { image: "/comp/php.png", name: "PHP" },
+      ],
+    },
+  ];
+
   return (
     <>
       {/* Upskilling for the Future Section (Balanced Compact Layout) */}
@@ -10,113 +82,104 @@ export default function Upskilling() {
           </h2>
 
           {/* Skillverse Card */}
-          <div className="flex flex-col md:flex-row bg-white border border-gray-200 shadow-sm mb-6 overflow-hidden">
-            {/* Left Image Placeholder */}
-            <div className="bg-gray-200 md:w-[35%] h-48 md:h-[180px] flex items-center justify-center text-gray-500 text-sm font-medium">
-              (image here)
+          <div className="flex flex-col md:flex-row bg-white border border-gray-200 shadow-sm mb-6 overflow-hidden rounded-lg">
+            {/* Left Column: Title */}
+            <div className="bg-gray-50 md:w-[35%] flex items-center justify-center text-secondary font-semibold text-lg p-6 border-r border-gray-200">
+              (Image here)
             </div>
 
-            {/* Right Text */}
-            <div className="p-5 md:w-[65%] flex flex-col justify-center">
+            {/* Right Column: Points */}
+            <div className="p-6 md:w-[65%]">
               <h3 className="text-lg font-semibold text-secondary mb-2">
-                Skillverse: Gaining a Competitive Edge
+                Interpersonal Skills
               </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                To keep students ahead in an evolving job market, Skillverse
-                offers industry-specific certifications in AI, Digital
-                Marketing, Finance, and other emerging domains. With training
-                modules focusing on leadership skills, case studies, and live
-                projects, students emerge as highly skilled professionals ready
-                to thrive in a competitive landscape.
-              </p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm leading-relaxed">
+                <li>
+                  Effective Communication Skills & Importance of Verbal and
+                  Non-Verbal Communication
+                </li>
+                <li>Questioning Skills to Clarify Doubts and Assumptions</li>
+                <li>Improving Listening Skills</li>
+                <li>Mock GD & Mock PI</li>
+                <li>Effective Writing Skills – Emails & Chats</li>
+                <li>Emotional Intelligence in Communication</li>
+                <li>7Cs of Professional Communication</li>
+                <li>Telephone Communication Skills – Seven Aspects</li>
+                <li>Managerial Communication Skills</li>
+                <li>Conflict Management in Teams</li>
+              </ul>
             </div>
           </div>
 
-          {/* URA Card */}
-          <div className="flex flex-col md:flex-row bg-white border border-gray-200 shadow-sm overflow-hidden">
-            {/* Left Image Placeholder */}
-            <div className="bg-gray-200 md:w-[35%] h-48 md:h-[180px] flex items-center justify-center text-gray-500 text-sm font-medium">
-              (image here)
+          <div className="flex flex-col md:flex-row bg-white border border-gray-200 shadow-sm overflow-hidden rounded-lg">
+            {/* Left Column: Title */}
+            <div className="bg-gray-50 md:w-[35%] flex items-center justify-center text-secondary font-semibold text-lg p-6 border-r border-gray-200">
+              (Image here)
             </div>
 
-            {/* Right Text */}
-            <div className="p-5 md:w-[65%] flex flex-col justify-center">
+            {/* Right Column: Points */}
+            <div className="p-6 md:w-[65%]">
               <h3 className="text-lg font-semibold text-secondary mb-2">
-                University Readiness Academy (URA): A Launchpad for Success
+                Aptitude
               </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                The University Readiness Academy (URA) is an exclusive
-                upskilling initiative that empowers students with advanced
-                technical and business skills through hands-on training and
-                projects, ensuring graduates excel in placements and corporate
-                roles.
-              </p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm leading-relaxed">
+                <li>Algebra and Number Theory</li>
+                <li>Arithmetic and Mensuration</li>
+                <li>Work, Time and Distance</li>
+                <li>Permutations and Combinations</li>
+                <li>Data Interpretation and Sufficiency</li>
+                <li>Modern and Financial Mathematics</li>
+                <li>Gamification</li>
+                <li>Logical Reasoning and Puzzles</li>
+                <li>Data Analysis and Probability</li>
+                <li>Problem-Solving</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Staying Future-Ready Section */}
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          {/* Heading and Intro */}
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-secondary mb-4">
-            Staying Future-Ready
+      {/* Engineering - Technical Section */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-10 uppercase">
+            Engineering - Technical
           </h2>
-          <p className="text-gray-700 text-center max-w-4xl mx-auto mb-10 text-sm md:text-base leading-relaxed">
-            At Indira College, industry readiness is seamlessly woven into our
-            DNA. Through structured collaborations, cutting-edge training
-            programs, and an industry-aligned curriculum, we ensure our students
-            are prepared not just for their first job, but for a lifetime of
-            career success. Your future begins here.
-          </p>
 
-          {/* 1️⃣ Board of Studies */}
-          <div className="flex flex-col md:flex-row bg-white border border-gray-200 shadow-sm mb-6 overflow-hidden">
-            {/* Left Image Placeholder */}
-            <div className="bg-gray-200 md:w-[35%] h-48 md:h-[180px] flex items-center justify-center text-gray-500 text-sm font-medium">
-              (image here)
-            </div>
+          {/* Columns (Mechanical / Civil / ENTC) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {sections.map((section, idx) => (
+              <div key={idx} className="text-center">
+                <h3 className="text-lg font-bold text-secondary mb-5 uppercase tracking-wide">
+                  {section.title}
+                </h3>
 
-            {/* Right Text */}
-            <div className="p-5 md:w-[65%] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-secondary mb-2">
-                Board of Studies: Keeping Our Curriculum Aligned with Industry
-                Needs
-              </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Our Board of Studies, comprising academicians and industry
-                leaders, plays a crucial role in keeping our curriculum aligned
-                with industry trends. By integrating the latest technologies and
-                essential workplace skills, we foster critical thinking,
-                innovation, and problem-solving abilities. This ensures that our
-                graduates remain relevant and highly sought after by recruiters.
-              </p>
-            </div>
-          </div>
+                {/* Logos Grid (Same style as Companies section) */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 justify-items-center">
+                  {section.items.map((item, index) => (
+                    <div
+                      key={index}
+                      className="relative h-20 w-20 bg-white border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all rounded-md overflow-hidden group"
+                    >
+                      {/* Logo */}
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        className="h-13 w-13 object-contain transition-transform duration-300 group-hover:scale-110 p-2"
+                        fill
+                      />
 
-          {/* 2️⃣ Professors of Practice */}
-          <div className="flex flex-col md:flex-row bg-white border border-gray-200 shadow-sm overflow-hidden">
-            {/* Left Image Placeholder */}
-            <div className="bg-gray-200 md:w-[35%] h-48 md:h-[180px] flex items-center justify-center text-gray-500 text-sm font-medium">
-              (image here)
-            </div>
-
-            {/* Right Text */}
-            <div className="p-5 md:w-[65%] flex flex-col justify-center">
-              <h3 className="text-lg font-semibold text-secondary mb-2">
-                Professors of Practice: Learning from Industry Leaders
-              </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                At Indira College, learning extends beyond textbooks through our
-                Professors of Practice (PoP) initiative. With over 50 industry
-                veterans actively involved in teaching, students gain insights
-                into industry expectations, challenges, and best practices.
-                These experts mentor students on real-world projects, case
-                studies, and job-readiness strategies, enriching their learning
-                experience with practical exposure.
-              </p>
-            </div>
+                      {/* Hover Text Overlay */}
+                      <div className="absolute inset-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-[10px] text-secondary font-semibold text-center px-2 leading-tight">
+                          {item.name}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
