@@ -9,30 +9,22 @@ import Career from "@/components/PlacementComponents/Career";
 import Testimonials from "@/components/PlacementComponents/Testimonials";
 import PlacementInformation from "@/components/PlacementComponents/PlacementInformation";
 import Upskilling from "@/components/PlacementComponents/Upskilling";
+import PlacementCarousel from "@/components/PlacementComponents/PlacementCarousel";
 
 function Placement() {
   return (
     <div className="w-full bg-white">
-      {/* Hero Banner Section */}
-      <section className="relative w-full h-[60vh]">
-        <Image
-          src="/Banner.jpg" // make sure this is in /public
-          alt="Indira College Banner"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </section>
+      <PlacementCarousel/>
       <Typingsection />
-      <CASsection />
-      <TrainingOverview />
       <Impact />
       <Companies />
       <ResearchLab />
       <Career /> {/* Add logos etc here */}
+      <CASsection />
+      <TrainingOverview />
       <Upskilling />
       <Testimonials />
-      <PlacementInformation />
+      <PlacementInformation /> {/* All the extra content goes here */}
     </div>
   );
 }
