@@ -26,34 +26,13 @@ export default function ChanakyaEdu() {
   ];
 
   const trustees = [
-    {
-      name: "Smt. Sarita Shankar Wakalkar",
-      role: "President",
-    },
-    {
-      name: "Dr. Tarita Shankar",
-      role: "Chief Managing Trustee and Founder Secretary",
-    },
-    {
-      name: "Mr. Shardul Gangal",
-      role: "Vice - President",
-    },
-    {
-      name: "Mr. Sahil Tarita Shankar",
-      role: "Joint Secretary",
-    },
-    {
-      name: "Mr. Rajesh Deshmukh",
-      role: "Treasurer",
-    },
-    {
-      name: "Ms. Priya Joshi",
-      role: "Trustee Member",
-    },
-    {
-      name: "Mr. Karan Patil",
-      role: "Trustee Member",
-    },
+    { name: "Smt. Sarita Shankar Wakalkar", role: "President" },
+    { name: "Dr. Tarita Shankar", role: "Chief Managing Trustee and Founder Secretary" },
+    { name: "Mr. Shardul Gangal", role: "Vice - President" },
+    { name: "Mr. Sahil Tarita Shankar", role: "Joint Secretary" },
+    { name: "Mr. Rajesh Deshmukh", role: "Treasurer" },
+    { name: "Ms. Priya Joshi", role: "Trustee Member" },
+    { name: "Mr. Karan Patil", role: "Trustee Member" },
   ];
 
   return (
@@ -68,7 +47,7 @@ export default function ChanakyaEdu() {
           width={1700}
         />
         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg text-center px-4">
             Shree Chanakya Education Society (SCES)
           </h1>
         </div>
@@ -79,54 +58,52 @@ export default function ChanakyaEdu() {
         {/* Left Section */}
         <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold text-secondary mb-6">
-            Shree Chanakya Education Society
+            Shree Chanakya Education Society (SCES)
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            The Shree Chanakya Education Society (SCES) was established in
-            February 1994, under the visionary leadership of Dr. Tarita Shankar,
-            with the aim of providing top quality post-graduate education in the
-            ﬁelds of Business Management, International Business and Information
-            Technology. By consistently providing quality education over the
-            past few decades, institutes at Indira Group are now considered as
-            some of the best in Pune.
+            The <strong>Shree Chanakya Education Society (SCES)</strong> was established in February 1994 under the
+            visionary leadership of <strong>Dr. Tarita Shankar</strong>, with the mission to provide high-quality
+            postgraduate education in <strong>Business Management, International Business,</strong> and
+            <strong> Information Technology</strong>. What began with just 60 students and a single program has
+            evolved into a thriving academic ecosystem under the brand of <strong>Indira University</strong>, attracting
+            over 8000 students from across India.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            At a time when India was struggling to put its economy back on its
-            feet, Dr. Tarita Shankar sensed that education too would have to
-            become more broad-based and more vocational in nature if India was
-            to stand up to global competition. Thus, in 1994, began a saga of
-            growth and quality education — a story that continues with 14 full
-            ﬂedged Institutes making a strong presence in Pune's educational
-            landscape.
+            During a period of significant economic transition in India, <strong>Dr. Tarita Shankar</strong> recognized
+            the need for an education system that was practical, industry-aligned, and globally competitive. Her foresight
+            laid the groundwork for an institution committed to delivering future-focused, value-driven education that
+            continues to evolve with the demands of a dynamic world.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Since inception, the Institutes managed by SCES have maintained high
-            academic standards and have successfully provided trained manpower
-            to the industrial and services sector of the country.
+            Today, <strong>Indira University</strong> stands as a symbol of excellence in higher education, offering a
+            wide array of undergraduate and postgraduate programs across disciplines. A key part of this academic journey
+            is the <strong>Chanakya Campus</strong> located at Parandwadi, which offers premier <strong>Engineering</strong> and
+            <strong> Management</strong> programs through state-of-the-art infrastructure, experienced faculty, and
+            strong industry integration.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            With a modest strength of 60 students pursuing a single course, SCES
-            has grown steadily and today boasts of 14 Institutes with over 8000
-            students from across India pursuing multi-disciplinary programs.
+            SCES has always upheld high academic standards and has been instrumental in providing skilled talent to
+            India’s industrial and service sectors. Guided by the core philosophy of offering
+            <strong> “Management education in a corporate environment,”</strong> the institution seamlessly blends
+            academic learning with real-world exposure.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-10">
-            The objective of the institute is to provide 'Management education
-            in a corporate environment', which has been possible due to the
-            sincere and dedicated efforts of the SCES members, who bring
-            invaluable experience from varied sectors.
+            Backed by a committed team with deep expertise across academia, industry, and public service, SCES continues
+            to shape professionals who are ethically grounded, technically proficient, and globally competitive.
           </p>
 
           {/* Board of Trustees Section */}
           <div className="mt-12">
-            <h3 className="text-2xl font-bold text-secondary mb-2">Board of Trustees</h3>
+            <h3 className="text-2xl font-bold text-secondary mb-2">
+              Board of Trustees
+            </h3>
             <p className="text-gray-600 mb-8">
-              Managing Committee Members/Trustees of 'Shree Chanakya Education
-              Society'
+              Managing Committee Members / Trustees of Shree Chanakya Education Society
             </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

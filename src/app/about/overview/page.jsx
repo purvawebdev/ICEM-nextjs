@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 
-
 export default function Overview() {
   const rightLinks = [
     "Overview",
@@ -98,57 +97,123 @@ export default function Overview() {
         {/* Left Section */}
         <div className="md:w-2/3 bg-white p-6 rounded-xl shadow-md">
           <h2 className="text-2xl font-semibold text-secondary mb-6">
-            Overview
+            About Us
           </h2>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Indira College of Engineering and Management (ICEM), Pune is an
-            AICTE approved engineering college in Pune, established in 2007
-            under the umbrella of Indira Group of Institutes. The institute is
-            approved by All India Council of Technical Education (AICTE), New
-            Delhi, recognized by Government of Maharashtra and is affiliated to
-            Savitribai Phule Pune University. If you are looking for engineering
-            admission to an engineering college in Pune, then ICEM is a wise
-            choice.
+            Indira College of Engineering and Management (ICEM), Pune,
+            established in 2007 under the esteemed Indira Group of Institutes,
+            is a premier autonomous institution recognized for its commitment to
+            academic excellence, innovation, and holistic student development.
+            The college is approved by the All India Council for Technical
+            Education (AICTE), New Delhi, affiliated to Savitribai Phule Pune
+            University, and conferred autonomous status by the UGC. ICEM is also
+            proudly NAAC-accredited, reaffirming its position as one of the top
+            engineering and management institutes in Pune.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            ICEM, one of the best NAAC accredited engineering colleges in Pune,
-            has laid its foundation in the serene and picturesque settings of
-            Parandwadi Village of Maval Taluka, which was then dried in terms of
-            educational and infrastructural facilities. With the untiring
-            efforts of the management, this college has been successful in
-            creating educational and economic possibilities in the adjacent
-            rural areas.
+            Situated in the scenic surroundings of Parandwadi Village, Maval
+            Taluka, ICEM has made a significant impact on the educational and
+            infrastructural development of the region, especially in rural
+            communities. With a mission to make quality technical and management
+            education accessible, the institute serves as a catalyst for
+            academic, economic, and social empowerment.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Indira College of Engineering and Management, Pune is one of the
-            engineering colleges in Pune, which constitutes of 1500+ students
-            pursuing their UG and PG degree in Engineering and Management
-            courses. The process for engineering admission is straightforward at
-            ICEM, and it also has a reasonable engineering admission fees.
+            ICEM hosts a diverse student body of over 1500 learners, offering a
+            broad spectrum of undergraduate, postgraduate, and integrated
+            programs.
+          </p>
+
+          <h3 className="text-xl font-semibold text-primary mt-6 mb-3">
+            Our Programs:
+          </h3>
+
+          <p className="text-gray-700 mb-2 font-medium">
+            Undergraduate Engineering Programs in:
+          </p>
+          <ul className="list-disc list-inside text-gray-700 mb-4">
+            <li>Artificial Intelligence & Data Science</li>
+            <li>Information Technology</li>
+            <li>Computer Engineering</li>
+            <li>Electronics & Telecommunication Engineering</li>
+            <li>Mechanical Engineering</li>
+          </ul>
+
+          <p className="text-gray-700 mb-2 font-medium">
+            Postgraduate Engineering Programs (M.E.) in:
+          </p>
+          <ul className="list-disc list-inside text-gray-700 mb-4">
+            <li>Computer Engineering</li>
+            <li>Mechanical Engineering</li>
+          </ul>
+
+          <p className="text-gray-700 mb-2 font-medium">Integrated Programs:</p>
+          <ul className="list-disc list-inside text-gray-700 mb-6">
+            <li>Integrated MBA (BBA + MBA)</li>
+            <li>Integrated MCA (BCA + MCA)</li>
+          </ul>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Through a well-balanced academic structure, ICEM blends theoretical
+            learning with practical application. Our students gain hands-on
+            exposure through industry-relevant projects, expert-led workshops,
+            field visits, and case studies, ensuring they are industry-ready
+            from day one.
           </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-            Indira College of Engineering Management, Pune has maintained a
-            perfect balance between theory and practical learning through case
-            studies, fieldwork, and industry interaction. Industrial tours help
-            students gain exposure to modern practices and technologies, keeping
-            them competitive and industry-ready.
+            A standout feature of ICEM is its strong industry-academia
+            interface, supported by collaborations and MoUs with prominent
+            organizations and international institutions, including a key
+            partnership with the University of Nottingham, Malaysia. These
+            collaborations enable us to offer value-added programs conducted by
+            industry experts, such as:
           </p>
 
-          <p className="text-gray-700 leading-relaxed">
-            The college fosters holistic development through scholar clubs,
-            interpersonal skills enhancement, entrepreneurship programs, and
-            ethics-driven education. Strong Industry-Institute Interaction and
-            global collaborations make ICEM a top engineering institution in
-            Pune.
+          <ul className="list-disc list-inside text-gray-700 mb-4">
+            <li>Workshops on emerging technologies</li>
+            <li>Career-readiness and placement preparation bootcamps</li>
+            <li>Advanced domain-specific certifications</li>
+            <li>Entrepreneurship and innovation programs</li>
+            <li>Professional skill development and etiquette training</li>
+            <li>Mentorship and guest lectures by leading industry professionals</li>
+          </ul>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our Scholar Clubs further enrich the student experience by
+            recognizing and supporting academic talent through personalized
+            mentoring in leadership, communication, ethics, and presentation
+            skills.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Our ultra-modern classrooms and labs, equipped with ICT panels, are
+            renovated to meet global standards, providing a future-ready
+            learning environment. With a highly qualified faculty, robust
+            industry connections, and a student-centric approach, ICEM equips
+            future engineers and managers to thrive in a dynamic, global
+            environment.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed mb-4">
+            ICEM boasts an impressive placement record, with students securing
+            opportunities in leading national and international companies across
+            various industries. Our strong industry connections and career
+            readiness programs ensure successful placements in top-tier
+            organizations worldwide.
+          </p>
+
+          <p className="text-gray-700 leading-relaxed font-medium">
+            We are proud to nurture the innovators, leaders, and change-makers
+            of tomorrow.
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="md:w-1/3 bg-primary  text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
+        <div className="md:w-1/3 bg-primary text-white p-6 rounded-xl shadow-md flex flex-col justify-between">
           {/* About Links */}
           <ul className="space-y-4 w-full mb-8">
             {rightLinks.map((link, index) => (
@@ -230,14 +295,15 @@ export default function Overview() {
 
       {/* Leader's Desk */}
       <div className="max-w-7xl mx-auto px-6 pb-16">
-        <h3 className="text-2xl font-bold text-secondary mb-8">Leader's Desk</h3>
+        <h3 className="text-2xl font-bold text-secondary mb-8">
+          Leader's Desk
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {leaders.map((leader, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4 border border-gray-100"
             >
-              {/* Empty Placeholder */}
               <div className="w-full h-64 bg-gray-100 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
                 [ Image Placeholder ]
               </div>
@@ -252,14 +318,15 @@ export default function Overview() {
 
       {/* HOD Section */}
       <div className="max-w-7xl mx-auto px-6 pb-20">
-        <h3 className="text-2xl font-bold text-secondary mb-8">Head of Departments (HoDs)</h3>
+        <h3 className="text-2xl font-bold text-secondary mb-8">
+          Head of Departments (HoDs)
+        </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {hods.map((hod, index) => (
             <div
               key={index}
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-center p-4 border border-gray-100"
             >
-              {/* Empty Placeholder */}
               <div className="w-full h-60 bg-gray-100 rounded-t-xl flex items-center justify-center text-gray-500 text-sm">
                 [ Image Placeholder ]
               </div>
@@ -274,4 +341,3 @@ export default function Overview() {
     </div>
   );
 }
-
