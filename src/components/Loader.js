@@ -7,7 +7,7 @@ export default function Loader({ isLoading }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/60 backdrop-blur-sm">
       <div className="text-center space-y-6">
         {/* Floating animation for video */}
-        <div className="animate-float">
+        <div className="animate-float"> 
           <div className="w-32 h-32 bg-transparent rounded-2xl flex items-center justify-center mx-auto">
             {/* Transparent video instead of Image */}
             <video
