@@ -42,6 +42,17 @@ export default function AIDS() {
     }
   };
 
+  const allLogos = Array.from(
+    { length: 44 },
+    (_, i) => `/logos/logo${i + 1}.png`
+  ).filter((_, index) => ![13, 35, 37].includes(index + 1));
+
+  // ✅ Remove logos 18 & 25 (behind center circle)
+  const mainLogos = allLogos.filter((_, index) => ![17, 24].includes(index));
+
+  // ✅ Add logos 18 & 25 to the last row
+  const reorderedLogos = [...mainLogos, allLogos[17], allLogos[24]];
+
   return (
     <div className="w-full bg-white text-white">
       {/* ===== HERO SECTION ===== */}
@@ -50,7 +61,7 @@ export default function AIDS() {
           {/* LEFT TEXT SECTION */}
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-              4-Year B.E. CSE Program <br />
+              4-Year B.Tech AIDS Program <br />
               with specialisation in <br />
               <span className="text-secondary">
                 Artificial Intelligence & Future Technologies
@@ -58,10 +69,10 @@ export default function AIDS() {
             </h2>
 
             <p className="mt-4 text-white/80 leading-relaxed">
-              This innovative program blends foundational computer science
-              knowledge with cutting-edge skills in Artificial Intelligence,
-              Blockchain, Cloud Computing, and Cyber Security, helping prepare
-              students for high-impact careers in the tech industry.
+              The Department of Artificial Intelligence and Data Science at ICEM
+              aim to be one of the leading programs to provide value-added
+              quality education in Computer Science and Engineering with
+              specialization in Artificial Intelligence and Data Science.
             </p>
 
             {/* Buttons */}
@@ -85,7 +96,7 @@ export default function AIDS() {
           <div className="flex-1">
             <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
               <Image
-                src="/images/computer-hero.jpg"
+                src="/Programs/AIDSIMGPH.jpeg"
                 alt="Artificial Intelligence Program"
                 fill
                 className="object-cover"
@@ -334,14 +345,21 @@ export default function AIDS() {
               <h2 className="text-3xl font-bold text-secondary mb-4">
                 Program Highlights
               </h2>
-              <p className="text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
-                Our B.E. in Computer Science with Artificial Intelligence &
-                Future Technologies offers a unique blend of cutting-edge
-                knowledge and practical experience. With a focus on innovation,
-                industry-aligned projects, and hands-on labs, the program equips
-                students to lead in emerging technologies, while our strong
-                industry connections ensure enhanced career opportunities and
-                real-world exposure.
+              <p className="text-gray-700 max-w-7xl mx-auto mb-12 leading-relaxed">
+                Builds a solid foundation in advanced technologies of Artificial
+                Intelligence through industry-oriented curriculum.
+                Industry-Academia Collaboration Framework encourages students to
+                Learn, Collaborate, and Discover. Exposure of In-house
+                Incubation Cell nurturing various Startups. Strong emphasis on
+                Project, Labs, and Case Study-based learning. Opportunity to
+                gain expertise in advanced topics such as robotics, data science
+                components, intelligent reasoning, deep learning, pattern
+                recognition, computer vision, cognitive computing,
+                human-computer interaction, and various AI tools and
+                technologies. Acquire ability to design models and intelligent
+                solutions in a variety of domains & business applications.
+                Unique in-depth learning on emerging technologies. Student
+                participation in global competitions like hackathons.
               </p>
 
               {/* HIGHLIGHT CARDS */}
@@ -350,7 +368,7 @@ export default function AIDS() {
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                   <div className="w-full h-48 relative">
                     <Image
-                      src="/images/interdisciplinary-expertise.jpg"
+                      src="/Programs/AIDSET.jpeg"
                       alt="Interdisciplinary Expertise"
                       fill
                       className="object-cover"
@@ -376,7 +394,7 @@ export default function AIDS() {
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                   <div className="w-full h-48 relative">
                     <Image
-                      src="/images/cutting-edge-labs.jpg"
+                      src="/Programs/AIDSL.jpeg"
                       alt="Cutting-Edge Laboratories"
                       fill
                       className="object-cover"
@@ -401,10 +419,10 @@ export default function AIDS() {
                 <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all">
                   <div className="w-full h-48 relative">
                     <Image
-                      src="/images/industry-skills.jpg"
+                      src="/Programs/AIDSIT.jpeg"
                       alt="Industry-Relevant Skills"
                       fill
-                      className="object-cover"
+                      className="object-cover object-top-right"
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                     />
@@ -456,7 +474,7 @@ export default function AIDS() {
               <div className="flex-1">
                 <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
                   <Image
-                    src="/images/career-opportunities.jpg"
+                    src="/Programs/CO.jpg"
                     alt="Career Opportunities in AI and Future Technologies"
                     fill
                     className="object-cover"
@@ -469,11 +487,14 @@ export default function AIDS() {
           </div>
 
           {/* ===== CAMPUS RECRUITMENT SECTION ===== */}
-          <div className="w-full bg-[#f7f7f7] text-black py-16">
+          <div className="bg-[#f7f7f7] text-black py-16 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 text-center">
+              {/* ✅ Section Heading */}
               <h2 className="text-3xl font-bold text-secondary mb-4">
                 Campus Recruitment
               </h2>
+
+              {/* ✅ Description */}
               <p className="text-gray-700 max-w-4xl mx-auto mb-10 leading-relaxed">
                 The program prepares students to excel in diverse fields,
                 including AI research labs, Blockchain start-ups, Cyber Security
@@ -481,20 +502,36 @@ export default function AIDS() {
                 are:
               </p>
 
-              {/* LOGO GRID */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-                {Array(18)
-                  .fill("")
-                  .map((_, index) => (
-                    <div
-                      key={index}
-                      className="h-20 bg-white shadow-md rounded-md flex items-center justify-center text-gray-500"
-                    >
-                      <div className="w-16 h-8 bg-gray-200 rounded flex items-center justify-center text-xs">
-                        Logo {index + 1}
-                      </div>
-                    </div>
-                  ))}
+              {/* ✅ Recruiter Logos Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-x-3 gap-y-7 place-items-center relative">
+                {reorderedLogos.map((logo, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-center justify-center w-28 h-16 bg-white rounded-md shadow-sm hover:shadow-md transition-all duration-300 ${
+                      [17, 24].includes(index) ? "invisible" : ""
+                    }`}
+                  >
+                    <Image
+                      src={logo}
+                      alt={`Recruiter Logo ${index + 1}`}
+                      width={100}
+                      height={60}
+                      className="object-contain max-w-[80%] max-h-[60px] hover:grayscale-0 transition duration-300"
+                      loading={index < 7 ? "eager" : "lazy"}
+                      priority={index < 7}
+                    />
+                  </div>
+                ))}
+
+                {/* ✅ Center Circular Badge */}
+                <div className="absolute top-[49%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-[linear-gradient(145deg,_#278da4_0%,_#003c84_90%)] text-white flex flex-col items-center justify-center shadow-xl border-[4px] border-[#D4AF37]">
+                    <p className="text-xl md:text-2xl font-bold">350+</p>
+                    <p className="text-sm md:text-base font-medium">
+                      Corporates
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
