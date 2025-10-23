@@ -1,10 +1,19 @@
-"use client"
+"use client";
 
 import React from "react";
+import Image from "next/image";
 
 const ExploreSection = () => {
+  const cards = [
+    { title: "NAAC", img: "/NAAC.jpg" },
+    { title: "NIRF", img: null },
+    { title: "QS Ranking", img: null },
+    { title: "World Ranking", img: null },
+  ];
+
   return (
     <div className="max-w-7xl mx-auto px-6 pt-12 pb-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      {/* Left Section */}
       <div>
         <h2 className="text-2xl font-bold text-gray-900 leading-snug">
           Explore Your Potential with
@@ -23,15 +32,26 @@ const ExploreSection = () => {
         </p>
       </div>
 
+      {/* Right Section */}
       <div className="grid grid-cols-2 gap-6">
-        {["NAAC", "NIRF", "QS Ranking", "World Ranking"].map((title, index) => (
+        {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-gray-50 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center h-28"
+            className=" rounded-lg    flex items-center justify-center h-28"
           >
-            <span className="text-gray-400 text-sm">
-              [ {title} Image Here ]
-            </span>
+            {card.img ? (
+              <Image
+                src={card.img}
+                alt={card.title}
+                width={200}
+                height={80}
+                className="object-contain rounded-md"
+              />
+            ) : (
+              <span className="text-gray-400 text-sm">
+                [ {card.title} Image Here ]
+              </span>
+            )}
           </div>
         ))}
       </div>

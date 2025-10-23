@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const EnergyInnovation = () => {
   const cards = [
@@ -8,16 +9,19 @@ const EnergyInnovation = () => {
       title: "Get Industry-ready",
       description:
         "We ensure every graduate is industry-ready through cutting-edge curriculum, innovation labs, and strong industry collaborations that keep students aligned with the latest technologies and trends.",
+      img: "/IndustryReady.jpg",
     },
     {
       title: "Research from Day One",
       description:
         "At Indira College, research is a way of life, supported by state-of-the-art facilities, experienced faculty, and collaborations that empower students to solve real-world challenges.",
+      img: "/Researchfromday1.jpg",
     },
     {
       title: "Corporate Partnerships & Recruitment Drive",
       description:
         "We have established strong, lasting relationships with a diverse portfolio of national and multinational corporations. Benefit from exclusive recruitment drives, on-campus placements, and direct access to sought-after employers actively seeking ICEM talent.",
+      img: "/CorporatePartnership.jpg",
     },
   ];
 
@@ -31,10 +35,19 @@ const EnergyInnovation = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
           {cards.map((card, index) => (
-            <div key={index}>
-              <div className="w-full h-60 bg-white/20 rounded-lg mb-4 flex items-center justify-center text-white/70 text-sm">
-                [ Image {index + 1} Here ]
+            <div key={index} className="group transition-all duration-300">
+              {/* Image Section */}
+              <div className="w-full h-60 rounded-lg mb-4 overflow-hidden relative">
+                <Image
+                  src={card.img}
+                  alt={card.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
+
+              {/* Text Section */}
               <h3 className="text-lg font-semibold mb-2 underline underline-offset-4">
                 {card.title}
               </h3>
