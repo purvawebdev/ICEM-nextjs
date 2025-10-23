@@ -6,7 +6,7 @@ import Image from "next/image";
 const ExploreSection = () => {
   const cards = [
     { title: "NAAC", img: "/NAAC.jpg" },
-    { title: "NIRF", img: null },
+    { title: "NIRF", img: "/NIRF.jpg" },
     { title: "QS Ranking", img: null },
     { title: "World Ranking", img: null },
   ];
