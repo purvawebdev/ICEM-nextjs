@@ -46,15 +46,14 @@ const Navbar = () => {
               label: "Shree Chanakya Education Society",
               link: "/about/chanakya-edu",
             },
-            { label: "Indira Group of Institute", link: "/about/igi" },
+  
             {
               label: "Chairpersons Profile & Chief Mentor IGL",
               link: "/about/cfcm",
             },
             { label: "Facilities", link: "/about/facilities" },
             { label: "Governance", link: "/about/governance" },
-            { label: "Campus Leadership", link: "" },
-            { label: "Examination", link: "/about/examination" },
+    
             { label: "Accreditation", link: "about/accreditation" },
           ],
         },
@@ -384,9 +383,10 @@ const Navbar = () => {
             <Link href="/placement" className="hover:text-primary">
               Placement
             </Link>
-            <div className="hover:text-primary cursor-pointer">
-              Career Development
-            </div>
+            <Link href="/about/examination" className="hover:text-primary">
+              Examination
+            </Link>
+            
             <Link href="/alumni" className="hover:text-primary">
               Alumni
             </Link>

@@ -27,21 +27,9 @@ export default function IGOI() {
   ];
 
   const institutes = [
-    { name: "Indira Institute of Management Pune (IIMP)", url: "www.indiraiimp.edu.in" },
-    { name: "Indira Institute of Management PGDM (IIMP)", url: "www.indiraiimppgdm.edu.in" },
-    { name: "Indira College of Pharmacy (ICP)", url: "www.indiraicp.edu.in" },
-    { name: "Indira School of Business Studies PGDM (ISBS)", url: "www.indiraisbs.ac.in" },
-    { name: "Indira School of Business Studies MBA (ISBS-MBA)", url: "www.indiraisbsmb.edu.in" },
+  
     { name: "Indira Global Business School (IGBS)", url: "www.indiraigbs.edu.in" },
-    { name: "Indira College of Commerce & Science (ICCS)", url: "www.iccs.ac.in" },
     { name: "Indira College of Engineering & Management (ICEM)", url: "www.indiraicem.ac.in" },
-    { name: "Indira National School (INS)", url: "www.indiranationalschool.ac.in" },
-    { name: "Indira College of Architecture & Design (ICAD)", url: "www.indiraicad.edu.in" },
-    { name: "Indira College of Arts, Commerce & Science (ICACS)", url: "www.icacs.ac.in" },
-    { name: "Indira School of Communication (ISC)", url: "www.indiraisc.edu.in" },
-    { name: "Indira National School - Parandwadi (INS-P)", url: "www.insparandwadi.ac.in" },
-    { name: "Indira College of Physiotherapy (ICP)", url: "www.indiraicp.ac.in" },
-    { name: "Indira Institute of Technology (IIT)", url: "www.indiraiit.edu.in" },
   ];
 
   return (

@@ -37,15 +37,7 @@ export default function CFCM() {
                 CHAIRPERSON & CHIEF MENTOR<br />
                 INDIRA GROUP OF INSTITUTES, PUNE
               </p>
-              <p className="text-sm text-gray-600 mt-1">
-                Email:{" "}
-                <a
-                  href="mailto:taritashankar@indiraedu.com"
-                  className="text-primary hover:underline"
-                >
-                  taritashankar@indiraedu.com
-                </a>
-              </p>
+              
             </div>
           </div>
 

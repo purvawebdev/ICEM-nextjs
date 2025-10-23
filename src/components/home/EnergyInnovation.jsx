@@ -15,9 +15,9 @@ const EnergyInnovation = () => {
         "At Indira College, research is a way of life, supported by state-of-the-art facilities, experienced faculty, and collaborations that empower students to solve real-world challenges.",
     },
     {
-      title: "Start-up",
+      title: "Corporate Partnerships & Recruitment Drive",
       description:
-        "Indira College's Innovation Incubator equips students with design, prototyping, marketing, and funding resources, turning start-up ideas into impactful ventures that shape the future.",
+        "We have established strong, lasting relationships with a diverse portfolio of national and multinational corporations. Benefit from exclusive recruitment drives, on-campus placements, and direct access to sought-after employers actively seeking ICEM talent.",
     },
   ];
 

@@ -112,14 +112,7 @@ export default function Overview() {
             engineering and management institutes in Pune.
           </p>
 
-          <p className="text-gray-700 leading-relaxed mb-4">
-            Situated in the scenic surroundings of Parandwadi Village, Maval
-            Taluka, ICEM has made a significant impact on the educational and
-            infrastructural development of the region, especially in rural
-            communities. With a mission to make quality technical and management
-            education accessible, the institute serves as a catalyst for
-            academic, economic, and social empowerment.
-          </p>
+          
 
           <p className="text-gray-700 leading-relaxed mb-4">
             ICEM hosts a diverse student body of over 1500 learners, offering a
