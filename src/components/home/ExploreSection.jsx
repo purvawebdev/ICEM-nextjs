@@ -12,7 +12,19 @@ const ExploreSection = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 pt-12 pb-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="relative max-w-7xl mx-auto px-6 pt-12 pb-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center overflow-hidden">
+      {/* ✅ Floating Animated Chanakya GIF with mirroring */}
+      <div className="absolute top-0 right-0 h-[20vh] w-[100vw] z-50 animate-slideMirror pointer-events-none">
+        <video 
+          src="/chanakya.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-contain"
+        />
+      </div>
+
       {/* Left Section */}
       <div>
         <h2 className="text-2xl font-bold text-gray-900 leading-snug">
@@ -33,11 +45,11 @@ const ExploreSection = () => {
       </div>
 
       {/* Right Section */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-6 relative z-10">
         {cards.map((card, index) => (
           <div
             key={index}
-            className=" rounded-lg    flex items-center justify-center h-28"
+            className="rounded-lg flex items-center justify-center h-28"
           >
             {card.img ? (
               <Image

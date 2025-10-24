@@ -46,9 +46,10 @@ const CollegeUnplugged = () => {
           Indira College Unplugged
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        {/* ✅ Flex container with vertical centering */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10">
           {/* LEFT — Video List */}
-          <div className="space-y-6">
+          <div className="space-y-6 w-full lg:w-1/2">
             {videos.map((video, index) => (
               <div
                 key={index}
@@ -75,17 +76,19 @@ const CollegeUnplugged = () => {
             ))}
           </div>
 
-          {/* RIGHT — Main Video Player */}
-          <div className="w-full h-[360px] bg-black rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              width="100%"
-              height="100%"
-              src={toEmbedUrl(selectedVideo.url)}
-              title={selectedVideo.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          {/* RIGHT — Main Video Player (centered properly) */}
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <div className="w-full h-[360px] bg-black rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                width="100%"
+                height="100%"
+                src={toEmbedUrl(selectedVideo.url)}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
