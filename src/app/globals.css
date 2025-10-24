@@ -204,5 +204,5 @@ html {
 }
 
 .animate-slideMirror {
-  animation: slideMirror 30s ease-in-out infinite;
+  animation: slideMirror 20s ease-in-out infinite;
 }

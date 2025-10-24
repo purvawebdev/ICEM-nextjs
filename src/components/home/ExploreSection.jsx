@@ -14,7 +14,7 @@ const ExploreSection = () => {
   return (
     <div className="relative max-w-7xl mx-auto px-6 pt-12 pb-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center overflow-hidden">
       {/* ✅ Floating Animated Chanakya GIF with mirroring */}
-      <div className="absolute top-0 right-0 h-[20vh] w-[100vw] z-50 animate-slideMirror pointer-events-none">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[20vh] w-[30vw]  animate-slideMirror pointer-events-none">
         <video 
           src="/chanakya.webm"
           autoPlay
@@ -26,7 +26,8 @@ const ExploreSection = () => {
       </div>
 
       {/* Left Section */}
-      <div>
+      <div className="z-20">
+        <div className="bg-white/90">
         <h2 className="text-2xl font-bold text-gray-900 leading-snug">
           Explore Your Potential with
         </h2>
@@ -42,6 +43,7 @@ const ExploreSection = () => {
           campus recruiters. Join a vibrant community of students with ambitions
           as big as yours.
         </p>
+        </div>
       </div>
 
       {/* Right Section */}
