@@ -64,9 +64,11 @@ const EventsSection = () => {
             towards your dreams. Explore our programs and get in touch to begin
             your journey with us.
           </p>
-          <button className="bg-white text-secondary font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition flex items-center gap-2 mx-auto">
-            Get in touch <span className="text-xl">↗</span>
-          </button>
+          <a href="/#contact-form">
+            <button className="bg-white text-secondary font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition flex items-center gap-2 mx-auto">
+              Get in touch <span className="text-xl">↗</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>

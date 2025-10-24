@@ -22,7 +22,7 @@ export default function HomePage() {
       <EnergyInnovation />
       <CampusBeat />
       <CollegeUnplugged />
-      <FacultySection />
+ 
       <NewsSection />
       <EventsSection />
       <InstagramMosaic />

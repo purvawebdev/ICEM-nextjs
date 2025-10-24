@@ -155,3 +155,7 @@ body {
 .modal-form option:not([value=""]) {
   color: #111827 !important; /* text-gray-900 */
 }
+
+html {
+  scroll-behavior: smooth;
+}
