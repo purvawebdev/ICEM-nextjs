@@ -14,7 +14,7 @@ const ExploreSection = () => {
   return (
     <div className="relative px-6 pt-12 pb-6 overflow-hidden">
       {/* ✅ Floating Animated Chanakya GIF with mirroring */}
-      <div className="absolute top-0 right-20 h-[12vh] w-[30vw] animate-slideMirror pointer-events-none">
+      <div className="absolute top-0 right-20 h-[12vh] w-[40vw] animate-slideMirror pointer-events-none ">
         <video
           src="/chanakya.webm"
           autoPlay

@@ -77,7 +77,7 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-black rounded-xl">
+    <div className="relative w-full overflow-hidden bg-black">
       {images.length > 0 ? (
         <>
           {/* ✅ Slider container */}

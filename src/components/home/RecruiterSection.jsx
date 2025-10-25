@@ -6,7 +6,7 @@ import Image from "next/image";
 const RecruitersSection = () => {
   // ✅ Load all 44 logos, excluding 13 & 15
   const allLogos = Array.from({ length: 44 }, (_, i) => `/logos/logo${i + 1}.png`).filter(
-    (_, index) => ![35, 37 , 13].includes(index + 1)
+    (_, index) => ![35, 37].includes(index + 1)
   );
 
   // ✅ Remove logos 18 & 25 (they are behind the circle)
