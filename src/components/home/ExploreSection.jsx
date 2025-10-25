@@ -12,9 +12,9 @@ const ExploreSection = () => {
   ];
 
   return (
-    <div className="relative px-6 pt-12 pb-6 overflow-hidden">
-      {/* ✅ Floating Animated Chanakya GIF with mirroring */}
-      <div className="absolute top-0 right-20 h-[12vh] w-[40vw] animate-slideMirror pointer-events-none ">
+    <div className="relative px-4 sm:px-6 pt-8 sm:pt-12 pb-8 overflow-hidden">
+      {/* ✅ Floating Animated Chanakya GIF (visible only on desktop/tablet) */}
+      <div className="hidden sm:block absolute top-2 right-4 sm:right-20 h-[10vh] sm:h-[12vh] w-[60vw] sm:w-[40vw] animate-slideMirror pointer-events-none opacity-90">
         <video
           src="/chanakya.webm"
           autoPlay
@@ -26,34 +26,32 @@ const ExploreSection = () => {
       </div>
 
       {/* ✅ Centered Content with max-width constraint */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center relative z-10">
         {/* Left Section */}
-        <div>
-          <div className="bg-white/90">
-            <h2 className="text-2xl font-bold text-gray-900 leading-snug">
-              Explore Your Potential with
-            </h2>
-            <h2 className="text-2xl font-bold text-secondary mb-4 leading-snug">
-              INDIRA COLLEGE OF ENGINEERING & MANAGEMENT
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Located near Pune, Indira College of Engineering & Management, one
-              of the leading NAAC accredited engineering institutions, offers a
-              world of learning to help you achieve your goals. Choose from
-              industry-led programs, learn from outstanding faculty in
-              state-of-the-art facilities, and access limitless placement
-              opportunities with top campus recruiters. Join a vibrant community
-              of students with ambitions as big as yours.
-            </p>
-          </div>
+        <div className="bg-white/90 p-3 sm:p-4 rounded-md shadow-sm">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-snug">
+            Explore Your Potential with
+          </h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary mb-3 sm:mb-4 leading-snug">
+            INDIRA COLLEGE OF ENGINEERING & MANAGEMENT
+          </h2>
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+            Located near Pune, Indira College of Engineering & Management, one
+            of the leading NAAC accredited engineering institutions, offers a
+            world of learning to help you achieve your goals. Choose from
+            industry-led programs, learn from outstanding faculty in
+            state-of-the-art facilities, and access limitless placement
+            opportunities with top campus recruiters. Join a vibrant community
+            of students with ambitions as big as yours.
+          </p>
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-6 lg:mt-0">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="rounded-lg flex items-center justify-center h-28"
+              className="rounded-lg flex items-center justify-center h-24 sm:h-28 bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               {card.img ? (
                 <Image
@@ -64,7 +62,7 @@ const ExploreSection = () => {
                   className="object-contain rounded-md"
                 />
               ) : (
-                <span className="text-gray-400 text-sm">
+                <span className="text-gray-400 text-xs sm:text-sm text-center px-2">
                   [ {card.title} Image Here ]
                 </span>
               )}

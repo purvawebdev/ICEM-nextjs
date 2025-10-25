@@ -67,8 +67,8 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Dots (bottom-left corner) */}
-      <div className="absolute bottom-5 right-5 flex gap-2 items-center">
+      {/* Dots (bottom-right corner) - hidden on mobile */}
+      <div className="absolute bottom-5 right-5 hidden sm:flex gap-2 items-center">
         {images.map((_, i) => (
           <button
             key={i}

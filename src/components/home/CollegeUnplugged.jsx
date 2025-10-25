@@ -40,45 +40,45 @@ const CollegeUnplugged = () => {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
   return (
-    <div className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+    <div className="bg-white py-10 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center sm:text-left">
           Indira College Unplugged
         </h2>
 
-        {/* ✅ Flex container with vertical centering */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-10">
+        {/* ✅ Responsive Flex Container */}
+        <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-8 sm:gap-10">
           {/* LEFT — Video List */}
-          <div className="space-y-6 w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 space-y-4 sm:space-y-6">
             {videos.map((video, index) => (
               <div
                 key={index}
                 onClick={() => setSelectedVideo(video)}
-                className={`flex items-center gap-4 p-3 rounded-lg cursor-pointer transition ${
+                className={`flex items-center gap-3 sm:gap-4 p-2 sm:p-3 rounded-lg cursor-pointer transition ${
                   selectedVideo.title === video.title
                     ? "bg-blue-50 border-l-4 border-blue-500"
                     : "bg-gray-50 hover:bg-gray-100"
                 }`}
               >
-                <div className="relative w-32 h-20 flex-shrink-0">
+                <div className="relative w-24 h-16 sm:w-32 sm:h-20 flex-shrink-0">
                   <Image
                     src={video.thumbnail}
                     alt={video.title}
                     fill
-                    sizes="128px"
+                    sizes="(max-width: 640px) 96px, 128px"
                     className="object-cover rounded-md"
                   />
                 </div>
-                <h3 className="text-base font-medium text-gray-800 hover:underline">
+                <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-800 leading-snug line-clamp-2">
                   {video.title}
                 </h3>
               </div>
             ))}
           </div>
 
-          {/* RIGHT — Main Video Player (centered properly) */}
+          {/* RIGHT — Main Video Player */}
           <div className="w-full lg:w-1/2 flex justify-center items-center">
-            <div className="w-full h-[360px] bg-black rounded-lg overflow-hidden shadow-lg">
+            <div className="w-full h-48 sm:h-64 md:h-80 lg:h-[360px] bg-black rounded-lg overflow-hidden shadow-lg">
               <iframe
                 width="100%"
                 height="100%"
