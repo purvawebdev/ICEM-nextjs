@@ -12,7 +12,7 @@ export default function SportsRecreation() {
       <div className="relative w-full h-[75vh]">
         <Image
           src={bannerImg}
-          alt="ICEM Sports"
+          alt="ICEM Sportss"
           fill
           style={{ objectFit: "cover" }}
           priority
