@@ -79,7 +79,7 @@ export default function TrainingOverview() {
     <section ref={sectionRef} className="py-8 sm:py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
         {/* Section Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-4 sm:mb-5">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-3 sm:mb-5">
           Training Overview
         </h2>
 
